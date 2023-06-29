@@ -1,0 +1,32 @@
+using System;
+
+public class Book
+{
+    public string Title { get; set; }
+    public string Author { get; set; }
+    public int Pages { get; set; }
+
+    public Book(string title, string author, int pages)
+    {
+        Title = title;
+        Author = author;
+        Pages = pages;
+    }
+
+    public void PrintInfo()
+    {
+        Console.WriteLine($"\"{Title}\" by {Author} ({Pages} pages)");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Book book1 = new Book("Moby-Dick", "Herman Melville", 704);
+        Book book2 = new Book("1984", "George Orwell", 328);
+
+        book1.PrintInfo();
+        book2.PrintInfo();
+    }
+}
